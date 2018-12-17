@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './components/Header';
+import { BrowserRouter } from 'react-router-dom'
 
 class Main extends React.Component {
   render() {
@@ -11,4 +12,8 @@ class Main extends React.Component {
   }
 }
 
-ReactDOM.render(<Main/>, document.getElementById('root'));
+ReactDOM.render((
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>
+), document.getElementById('root'))
