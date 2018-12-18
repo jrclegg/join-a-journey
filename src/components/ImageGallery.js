@@ -15,40 +15,33 @@ const Wrapper = styled.div `
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 0 4px;
 `
 const SideColumn = styled.div`
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
 `
 const MidColumn = styled.div`
     -ms-flex: 25%; /* IE10 */
     flex: 25%;
     max-width: 60%;
-    padding: 0 4px;
 `
 const Image = styled.img`
     width: 100%;
+    float: left;
 `
 
 const ImageGallery = () => {
     return (
         <Wrapper>
             <SideColumn>
-                <Image src={caiman} alt="caiman"/>
-                <Image src={elephant} alt="elephant"/>
-                <Image src={toucan} alt="toucan"/>
+                <Image src={caiman} alt="caiman"/><Image src={elephant} alt="elephant"/><Image src={toucan} alt="toucan"/>
             </SideColumn>
             <MidColumn>
-                <Image src={tiger} alt="tiger"/>
-                <Image src={gorilla} alt="gorilla"/>
+                <Image src={tiger} alt="tiger"/><Image src={gorilla} alt="gorilla"/>
             </MidColumn>
             <SideColumn>
-                <Image src={chameleon} alt="chameleon"/>
-                <Image src={whiteshark} alt="great white shark"/>
-                <Image src={penguins} alt="penguins"/>
+                <Image src={chameleon} alt="chameleon"/><Image src={whiteshark} alt="great white shark"/><Image src={penguins} alt="penguins"/>
             </SideColumn>
         </Wrapper>
     )
