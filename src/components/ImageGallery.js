@@ -10,40 +10,39 @@ import whiteshark from '../images/whiteshark.png';
 import penguins from '../images/emperorpenguin.png';
 
 
-const Wrapper = styled.div `
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-`
-const SideColumn = styled.div`
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
-`
-const MidColumn = styled.div`
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 60%;
+const Grid = styled.div `
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin-left: 20px;
+    margin-right: 20px;
 `
 const Image = styled.img`
-    width: 100%;
-    float: left;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
 `
 
 const ImageGallery = () => {
     return (
-        <Wrapper>
-            <SideColumn>
-                <Image src={caiman} alt="caiman"/><Image src={elephant} alt="elephant"/><Image src={toucan} alt="toucan"/>
-            </SideColumn>
-            <MidColumn>
-                <Image src={tiger} alt="tiger"/><Image src={gorilla} alt="gorilla"/>
-            </MidColumn>
-            <SideColumn>
-                <Image src={chameleon} alt="chameleon"/><Image src={whiteshark} alt="great white shark"/><Image src={penguins} alt="penguins"/>
-            </SideColumn>
-        </Wrapper>
+        <Grid>
+            <Image src={caiman} alt="caiman"/>
+            <Image src={elephant} alt="elephant"/>
+            <Image src={toucan} alt="toucan"/>
+            <Image src={tiger} alt="tiger"/>
+            <Image src={gorilla} alt="gorilla"/>
+            <Image src={chameleon} alt="chameleon"/>
+            <Image src={whiteshark} alt="great white shark"/>
+            <Image src={penguins} alt="penguins"/>
+            <Image src={caiman} alt="caiman"/>
+            <Image src={elephant} alt="elephant"/>
+            <Image src={toucan} alt="toucan"/>
+            <Image src={tiger} alt="tiger"/>
+            <Image src={gorilla} alt="gorilla"/>
+            <Image src={chameleon} alt="chameleon"/>
+            <Image src={whiteshark} alt="great white shark"/>
+        </Grid>
     )
 }
 
