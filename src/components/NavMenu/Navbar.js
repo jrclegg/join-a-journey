@@ -1,34 +1,11 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import NavWrapper from './NavWrapper'
+import NavMenu from './NavMenu'
+import NavMenuLink from './NavMenuLink'
+import NavLabel from './NavLabel'
 import DropdownLink from './DropdownLink'
 import DropdownMenu from './DropdownMenu'
 import { Link } from 'react-router-dom';
-
-
-const NavWrapper = styled.nav`
-  z-index: 230;
-  padding: 20px;
-  background-color: white;
-  text-decoration: none;
-`
-const NavLabel = styled.p`
-  text-decoration: none;
-  list-style-type: none;
-  font-family: 'Open Sans Semibold', arial;
-  font-size: 22px;
-`
-const NavMenu = styled.ul `
-  float: right;
-  margin-top: -50px;
-`
-const NavMenuLink = styled(Link)`
-  float: left;
-  padding-right: 100px;
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-  font-family: "Open Sans";
-`
 
 const linkStyle = {
     textDecoration: 'none',
@@ -81,8 +58,11 @@ class Navbar extends Component {
               Wildlife
               {this.state.showMenu === "wildlife" &&
                 <DropdownMenu>
-                  <DropdownLink to="/small-mammals">Small Mammals</DropdownLink>
+                  <DropdownLink to="/big-cats">
+                   Big Cats
+                  </DropdownLink>
                   <DropdownLink to="/large-mammals">Large Mammals</DropdownLink>
+                  <DropdownLink to="/large-mammals">Small Mammals</DropdownLink>
                   <DropdownLink to="/primates">Primates</DropdownLink>
                   <DropdownLink to="/reptiles">Reptiles</DropdownLink>
                   <DropdownLink to="/marine">Marine</DropdownLink>
