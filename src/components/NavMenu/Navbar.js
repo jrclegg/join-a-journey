@@ -19,8 +19,6 @@ class Navbar extends Component {
     this.state = {
        showMenu: false
     }
-    this.showMenu = this.showMenu.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
   }
 
   showMenu(event) {
@@ -44,7 +42,7 @@ class Navbar extends Component {
             </NavLabel>
           </Link>
           <NavMenu>
-            <NavMenuLink id="expeditions" to="/expedition-type" onMouseOver={this.showMenu} onMouseLeave={this.hideMenu}>
+            <NavMenuLink id="expeditions" to="/expedition-type" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
               Expedition Type
               {this.state.showMenu === "expeditions" &&
                 <DropdownMenu>
@@ -54,7 +52,7 @@ class Navbar extends Component {
                 </DropdownMenu>
               }
             </NavMenuLink>
-            <NavMenuLink id="wildlife" to="/wildlife" onMouseOver={this.showMenu} onMouseLeave={this.hideMenu}>
+            <NavMenuLink id="wildlife" to="/wildlife" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
               Wildlife
               {this.state.showMenu === "wildlife" &&
                 <DropdownMenu>
