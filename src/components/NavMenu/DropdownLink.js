@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 const DropdownLink = styled(Link)`
     display:block;
-    min-width:140px;
-    height: 50px;
+    min-width:190px;
     text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-decoration: none;
@@ -15,6 +14,9 @@ const DropdownLink = styled(Link)`
     line-height: 50px;
     :hover {
       background: #19c589;
+      .dropdown-content {
+        display: block
+      }
     }
 `
 export default DropdownLink
