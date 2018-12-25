@@ -15,12 +15,13 @@ class Navbar extends Component {
        showMenu: false
     }
   }
-
   showMenu(event) {
     if(event.target.id === "expeditions") {
       this.setState({ showMenu: event.target.id });
     } else if (event.target.id === "wildlife"){
       this.setState({ showMenu: event.target.id });
+    } else if (event.target.id === "destinations"){
+      this.setState({showMenu: event.target.id})
     }
   }
 
@@ -120,7 +121,50 @@ class Navbar extends Component {
                 </DropdownMenu>
               }
             </NavMenuLink>
-            <NavMenuLink to="/destinations">Destinations</NavMenuLink>
+            <NavMenuLink id="destinations" to="/destinations" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+              Destinations
+              {showMenu === "destinations" &&
+                  <DropdownMenu className="dropdown">
+                    <DropdownLink to="/africa">
+                      Africa
+                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <DropdownLink to="/kenya">Kenya</DropdownLink>
+                      <DropdownLink to="/malawi">Malawi</DropdownLink>
+                      <DropdownLink to="/south-africa">South Africa</DropdownLink>
+                      <DropdownLink to="/tanzania">Tanzania</DropdownLink>
+                      <DropdownLink to="/ethiopia">Ethiopia</DropdownLink>
+                      <DropdownLink to="/uganda">Uganda</DropdownLink>
+                      <DropdownLink to="/namibia">Namibia</DropdownLink>
+                      <DropdownLink to="/rwanda">Rwanda</DropdownLink>
+                    </SecondDropdown>
+                    </DropdownLink>
+                    <DropdownLink to="/asia">
+                      Asia
+                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <DropdownLink to="/thailand">Thailand</DropdownLink>
+                      <DropdownLink to="/borneo">Borneo</DropdownLink>
+                      <DropdownLink to="/taiwan">Taiwan</DropdownLink>
+                      <DropdownLink to="/kygyzstan">Kyrgyzstan</DropdownLink>
+                      <DropdownLink to="/sri-lanka">Sri Lanka</DropdownLink>
+                      <DropdownLink to="/india">India</DropdownLink>
+                      <DropdownLink to="/nepal">Nepal</DropdownLink>
+                      <DropdownLink to="/japan">Japan</DropdownLink>
+                      <DropdownLink to="/bangladesh">Bangladesh</DropdownLink>
+                      <DropdownLink to="/sumatra">Sumatra</DropdownLink>
+                      <DropdownLink to="/indonesia">Indonesia</DropdownLink>
+                      <DropdownLink to="/tibet">Tibet</DropdownLink>
+                    </SecondDropdown>
+                    </DropdownLink>
+                    <DropdownLink to="/oceania">Oceania</DropdownLink>
+                    <DropdownLink to="/central-america">Central America</DropdownLink>
+                    <DropdownLink to="/south-america">South America</DropdownLink>
+                    <DropdownLink to="/europe">Europe</DropdownLink>
+                    <DropdownLink to="/middle-east">The Middle East</DropdownLink>
+                    <DropdownLink to="/north-america">North America</DropdownLink>
+                    <DropdownLink to="/antarctic">The Antarctic</DropdownLink>
+                  </DropdownMenu>
+              }
+            </NavMenuLink>
             <NavMenuLink to="/news">News</NavMenuLink>
             <NavMenuLink to="/about-us">About Us</NavMenuLink>
           </NavMenu>
