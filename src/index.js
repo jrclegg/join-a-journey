@@ -1,19 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './pages/Home';
+import App from './App';
 import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from 'styled-components'
+
+import theme from './theme/sizes'
 
 class Main extends React.Component {
   render() {
     return (
-      <Home/>
+      <App/>
     );
   }
 }
 
 ReactDOM.render((
   <BrowserRouter>
-    <Main />
+    <ThemeProvider theme={theme}>
+      <Main />
+    </ThemeProvider>
   </BrowserRouter>
 ), document.getElementById('root'))
