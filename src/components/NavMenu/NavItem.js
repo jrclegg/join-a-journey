@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
 
-const NavMenuLink = styled(Link)`
+const NavItem = styled.div`
   float: left;
   padding-right: 100px;
   text-decoration: none;
+  list-style-type: none;
   font-size: 22px;
   color: black;
   font-family: "Open Sans";
 `
-export default NavMenuLink
+export default NavItem
