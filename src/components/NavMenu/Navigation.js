@@ -9,7 +9,7 @@ import DropdownMenu from './DropdownMenu'
 import SecondDropdown from './SecondDropdown';
 
   
-class Navbar extends Component {
+class Navigation extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -179,4 +179,4 @@ class Navbar extends Component {
     )
   }
 }
-export default Navbar
+export default Navigation
