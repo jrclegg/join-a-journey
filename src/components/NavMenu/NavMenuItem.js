@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
 
-const NavMenuItem = styled(NavLink)`
+const NavMenuItem = styled.div`
   float: left;
   padding-right: 100px;
   text-decoration: none;
@@ -10,5 +10,6 @@ const NavMenuItem = styled(NavLink)`
   color: black;
   font-family: "Open Sans";
   border:0;
+  cursor: pointer;
 `
 export default NavMenuItem

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom'
 
 import './App.css';
 import './index.css';
@@ -11,12 +11,14 @@ import News from './pages/News'
 import About from './pages/About'
 import Navbar from './components/NavMenu/Navbar'
 
+const NavigationWithRouter = withRouter(Navbar);
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Navbar/>
+          <NavigationWithRouter/>
           <Switch>
             <Route exact path = "/" component={Home}/>
             <Route path="/expedition-type" component={Expeditions}/>

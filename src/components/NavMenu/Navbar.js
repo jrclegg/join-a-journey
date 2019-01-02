@@ -7,7 +7,6 @@ import DropdownLink from './DropdownLink'
 import DropdownList from './DropdownList'
 import DropdownMenu from './DropdownMenu'
 import SecondDropdown from './SecondDropdown';
-import { Link } from 'react-router-dom';
 
   
 class Navbar extends Component {
@@ -42,7 +41,7 @@ class Navbar extends Component {
       <NavWrapper>
           <Logo/>
           <NavMenu>
-            <NavMenuItem id="expeditions" href="expedition-type" to="/expedition-type" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+            <NavMenuItem id="expeditions" onClick={ e => this.props.history.push("/expedition-type") } onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Expedition Type
                 {showMenu === "expeditions" &&
                   <DropdownMenu>
@@ -52,7 +51,7 @@ class Navbar extends Component {
                   </DropdownMenu>
                 }
             </NavMenuItem>
-            <NavMenuItem id="wildlife" to="/wildlife" href="wildlife" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+            <NavMenuItem id="wildlife" onClick={ e => this.props.history.push("/wildlife") } onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Wildlife
                 {showMenu === "wildlife" &&
                   <DropdownMenu>
@@ -125,7 +124,7 @@ class Navbar extends Component {
                   </DropdownMenu>
                 }
             </NavMenuItem>
-            <NavMenuItem id="destinations" to="/destinations" href="destinations" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+            <NavMenuItem id="destinations" onClick={ e => this.props.history.push("/destinations") } onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Destinations
                 {showMenu === "destinations" &&
                   <DropdownMenu className="dropdown">
@@ -169,10 +168,10 @@ class Navbar extends Component {
                 </DropdownMenu>
                 }
             </NavMenuItem>
-            <NavMenuItem to="/news" href="news">
+            <NavMenuItem onClick={ e => this.props.history.push("/news") }>
                 News
             </NavMenuItem>
-            <NavMenuItem componentClass={Link} to="/about-us" href="about-us">
+            <NavMenuItem onClick={ e => this.props.history.push("/about-us") }>
                 About Us
             </NavMenuItem>
           </NavMenu>
