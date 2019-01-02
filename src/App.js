@@ -9,9 +9,9 @@ import Wildlife from './pages/Wildlife'
 import Destinations from './pages/Destinations'
 import News from './pages/News'
 import About from './pages/About'
-import Navbar from './components/NavMenu/Navbar'
+import Navigation from './components/NavMenu/Navigation'
 
-const NavigationWithRouter = withRouter(Navbar);
+const NavigationWithRouter = withRouter(Navigation);
 
 class App extends Component {
   render() {

@@ -3,10 +3,10 @@ import NavWrapper from './NavWrapper'
 import NavMenu from './NavMenu'
 import NavMenuItem from './NavMenuItem'
 import Logo from './Logo'
-import DropdownLink from './DropdownLink'
-import DropdownList from './DropdownList'
-import DropdownMenu from './DropdownMenu'
-import SecondDropdown from './SecondDropdown';
+import DropdownLink from './Dropdown/DropdownLink'
+import DropdownList from './Dropdown/DropdownList'
+import DropdownMenu from './Dropdown/DropdownMenu'
+import SecondDropdown from './/Dropdown/SecondDropdown';
 
   
 class Navigation extends Component {
@@ -32,10 +32,6 @@ class Navigation extends Component {
   };
 
   render() {
-    const linkStyle = {
-      marginTop: '-50px',
-      marginLeft: '100%'
-    };
     const { showMenu } = this.state
     return (
       <NavWrapper>
@@ -57,7 +53,7 @@ class Navigation extends Component {
                   <DropdownMenu>
                     <DropdownList>
                       <DropdownLink to="/big-cats">Big Cats</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/lions">Lions</DropdownLink>
                         <DropdownLink to="/tigers">Tigers</DropdownLink>
                         <DropdownLink to="/jaguars">Jaguars</DropdownLink>
@@ -67,7 +63,7 @@ class Navigation extends Component {
                     </DropdownList>
                     <DropdownList>
                       <DropdownLink to="/large-mammals">Large Mammals</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/oryx">Arabian Oryx</DropdownLink>
                         <DropdownLink to="/elephants">Elephants</DropdownLink>
                         <DropdownLink to="/wolves">Wolves</DropdownLink>
@@ -82,7 +78,7 @@ class Navigation extends Component {
                     </DropdownList>
                     <DropdownList>
                       <DropdownLink to="/small-mammals">Small Mammals</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/gordons-wildcat">Gordon's Wildcat</DropdownLink>
                         <DropdownLink to="/sand-fox">Sand Fox</DropdownLink>
                         <DropdownLink to="/red-panda">Red Panda</DropdownLink>
@@ -92,7 +88,7 @@ class Navigation extends Component {
                     </DropdownList>
                     <DropdownList>
                       <DropdownLink to="/primates">Primates</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/gorillas">Gorillas</DropdownLink>
                         <DropdownLink to="/orangutans">Orangutan</DropdownLink>
                         <DropdownLink to="/monkeys">Monkeys</DropdownLink>
@@ -100,14 +96,14 @@ class Navigation extends Component {
                     </DropdownList>
                     <DropdownList>
                       <DropdownLink to="/reptiles">Reptiles</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/komodo">Komodo Dragons</DropdownLink>
                         <DropdownLink to="/anacondas">Anacondas</DropdownLink>
                       </SecondDropdown>
                     </DropdownList>
                     <DropdownList>
                       <DropdownLink to="/marine">Marine</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/turtles">Sea Turtles</DropdownLink>
                         <DropdownLink to="/whales">Whales</DropdownLink>
                         <DropdownLink to="/sharks">Sharks</DropdownLink>
@@ -118,7 +114,7 @@ class Navigation extends Component {
                     </DropdownList>
                     <DropdownList>
                       <DropdownLink to="/birds">Birds</DropdownLink>
-                      <SecondDropdown className="dropdown-content" style={linkStyle}>
+                      <SecondDropdown className="dropdown-content">
                       </SecondDropdown>
                     </DropdownList>
                   </DropdownMenu>
@@ -130,20 +126,20 @@ class Navigation extends Component {
                   <DropdownMenu className="dropdown">
                   <DropdownList>
                     <DropdownLink to="africa">Africa</DropdownLink>
-                    <SecondDropdown className="dropdown-content" style={linkStyle}>
-                    <DropdownLink to="/kenya">Kenya</DropdownLink>
-                    <DropdownLink to="/malawi">Malawi</DropdownLink>
-                    <DropdownLink to="/south-africa">South Africa</DropdownLink>
-                    <DropdownLink to="/tanzania">Tanzania</DropdownLink>
-                    <DropdownLink to="/ethiopia">Ethiopia</DropdownLink>
-                    <DropdownLink to="/uganda">Uganda</DropdownLink>
-                    <DropdownLink to="/namibia">Namibia</DropdownLink>
-                    <DropdownLink to="/rwanda">Rwanda</DropdownLink>
-                  </SecondDropdown>
+                    <SecondDropdown className="dropdown-content">
+                      <DropdownLink to="/kenya">Kenya</DropdownLink>
+                      <DropdownLink to="/malawi">Malawi</DropdownLink>
+                      <DropdownLink to="/south-africa">South Africa</DropdownLink>
+                      <DropdownLink to="/tanzania">Tanzania</DropdownLink>
+                      <DropdownLink to="/ethiopia">Ethiopia</DropdownLink>
+                      <DropdownLink to="/uganda">Uganda</DropdownLink>
+                      <DropdownLink to="/namibia">Namibia</DropdownLink>
+                      <DropdownLink to="/rwanda">Rwanda</DropdownLink>
+                    </SecondDropdown>
                   </DropdownList>
                   <DropdownList>
                     <DropdownLink to="asia">Asia</DropdownLink>
-                    <SecondDropdown className="dropdown-content" style={linkStyle}>
+                    <SecondDropdown className="dropdown-content">
                     <DropdownLink to="/thailand">Thailand</DropdownLink>
                     <DropdownLink to="/borneo">Borneo</DropdownLink>
                     <DropdownLink to="/taiwan">Taiwan</DropdownLink>

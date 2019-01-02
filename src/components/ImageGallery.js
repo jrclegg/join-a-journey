@@ -1,14 +1,14 @@
 import React from 'react'
 import Grid from '../layouts/Grid'
 import Image from '../components/Image'
-import caiman from '../images/caiman.png';
-import elephant from '../images/elephant.png';
-import toucan from '../images/toucan.png';
-import tiger from '../images/tiger.png';
-import gorilla from '../images/gorilla.png';
-import chameleon from '../images/chameleon.png';
-import whiteshark from '../images/whiteshark.png';
-import penguins from '../images/emperorpenguin.png';
+import caiman from '../assets/caiman.png';
+import elephant from '../assets/elephant.png';
+import toucan from '../assets/toucan.png';
+import tiger from '../assets/tiger.png';
+import gorilla from '../assets/gorilla.png';
+import chameleon from '../assets/chameleon.png';
+import whiteshark from '../assets/whiteshark.png';
+import penguins from '../assets/emperorpenguin.png';
 
 const ImageGallery = () => {
     return (

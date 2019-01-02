@@ -5,7 +5,7 @@ const Image = styled.img`
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
     width: 100%;
     object-fit: fill;
-    height: 170px;
+    height: ${props => props.theme.sizes.heights.small};
 `
 
 export default Image

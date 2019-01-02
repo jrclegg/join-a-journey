@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from './Image'
-import caiman from '../images/caiman.png';
-import AmurLeopard from '../images/amurleopard.jpg';
+import caiman from '../assets/caiman.png';
+import AmurLeopard from '../assets/amurleopard.jpg';
 
 const Wrapper = styled.div`
     @media screen and (min-width: 1024px){
@@ -18,36 +17,52 @@ const Wrapper = styled.div`
 const MainTitle = styled.h1`
     font-size: 30px
     text-align: center
-    margin: 100px
+    margin: 50px
 `
+
 const Trip = styled.div`
-    border: solid 5px
-    border-radius: 5px;
     font-size: 150%;
 `
+const FeaturedImage = styled.img`
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    width: 100%;
+    object-fit: fill;
+    height: ${props => props.theme.sizes.heights.large};
+`
 
+const TripTitle = styled.h1`
+    font-size: 30px;
+    text-align: center;
+`
+const TripCompany = styled.h3`
+    font-size: 20px;
+    text-align: center;
+`
 
-
-const FeaturedDestinations = () => {
+const FeaturedTrips = () => {
     return (
         <div>
             <MainTitle>Featured Trips</MainTitle>
          <Wrapper>
             <Trip>
-                <Image src={AmurLeopard} alt="caiman"/>
-                <div>Lorem Upsfisfdsdfjsdifjsdifjsidfj</div>
+                <FeaturedImage src={AmurLeopard} alt="caiman"/>
+                <TripTitle>Snow Leopards of Kygyzstan</TripTitle>
+                <TripCompany>Nature Expeditions</TripCompany>
             </Trip>
             <Trip>
-                <Image src={caiman} alt="caiman"/>
-                <div>Lorem Upsfisfdsdfjsdifjsdifjsidfj</div>
+                <FeaturedImage src={caiman} alt="caiman"/>
+                <TripTitle>Iberian Wolf Conservation</TripTitle>
+                <TripCompany>Bioinsight Expeditions</TripCompany>
             </Trip>
             <Trip>
-                <Image src={caiman} alt="caiman"/>
-                <div>Lorem Upsfisfdsdfjsdifjsdifjsidfj</div>
+                <FeaturedImage src={caiman} alt="caiman"/>
+                <TripTitle>Kamchatka Brown Bears</TripTitle>
+                <TripCompany>Royle Safaris</TripCompany>
             </Trip>
         </Wrapper>
         </div>
     )
 }
-export default FeaturedDestinations
+export default FeaturedTrips
   
