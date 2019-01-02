@@ -2,9 +2,9 @@ import React from 'react';
 
 const Destinations = () => {
     return (
-        <div className="jumbotron">
-            <h1 className="display-3">Hello, world!</h1>
-        </div>
+      <div>
+        <p>Destinations</p>
+      </div>
     );
-}
+};
 export default Destinations;

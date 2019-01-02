@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { NavItem } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
-const NavMenuItem = styled(NavItem)`
+const NavMenuItem = styled(NavLink)`
   float: left;
   padding-right: 100px;
   text-decoration: none;

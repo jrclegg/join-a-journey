@@ -17,6 +17,7 @@ class Navbar extends Component {
        showMenu: false
     }
   }
+
   showMenu(event) {
     if(event.target.id === "expeditions") {
       this.setState({ showMenu: event.target.id });
@@ -41,7 +42,7 @@ class Navbar extends Component {
       <NavWrapper>
           <Logo/>
           <NavMenu>
-            <NavMenuItem componentClass={Link} id="expeditions" href="expedition-type" to="/expedition-type" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+            <NavMenuItem id="expeditions" href="expedition-type" to="/expedition-type" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Expedition Type
                 {showMenu === "expeditions" &&
                   <DropdownMenu>
@@ -51,7 +52,7 @@ class Navbar extends Component {
                   </DropdownMenu>
                 }
             </NavMenuItem>
-            <NavMenuItem componentClass={Link} id="wildlife"  to="/wildlife" href="wildlife" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+            <NavMenuItem id="wildlife" to="/wildlife" href="wildlife" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Wildlife
                 {showMenu === "wildlife" &&
                   <DropdownMenu>
@@ -124,7 +125,7 @@ class Navbar extends Component {
                   </DropdownMenu>
                 }
             </NavMenuItem>
-            <NavMenuItem componentClass={Link} id="destinations" to="/destinations" href="destinations" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
+            <NavMenuItem id="destinations" to="/destinations" href="destinations" onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Destinations
                 {showMenu === "destinations" &&
                   <DropdownMenu className="dropdown">
@@ -168,7 +169,7 @@ class Navbar extends Component {
                 </DropdownMenu>
                 }
             </NavMenuItem>
-            <NavMenuItem componentClass={Link} to="/news" href="news">
+            <NavMenuItem to="/news" href="news">
                 News
             </NavMenuItem>
             <NavMenuItem componentClass={Link} to="/about-us" href="about-us">

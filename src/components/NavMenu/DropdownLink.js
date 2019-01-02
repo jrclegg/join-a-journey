@@ -1,8 +1,8 @@
 
 import styled from 'styled-components'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const DropdownLink = styled(Link)`
+const DropdownLink = styled(NavLink)`
     display:block;
     min-width:190px;
     text-align: center;
