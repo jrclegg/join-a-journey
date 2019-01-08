@@ -4,8 +4,8 @@ import NavMenu from './NavMenu'
 import NavMenuItem from './NavMenuItem'
 import Logo from './Logo'
 import DropdownLink from './Dropdown/DropdownLink'
-import DropdownList from './Dropdown/DropdownList'
-import DropdownMenu from './Dropdown/DropdownMenu'
+import Dropdown from './Dropdown/Dropdown'
+import DropdownContainer from './Dropdown/DropdownContainer'
 import SecondDropdown from './/Dropdown/SecondDropdown';
 
   
@@ -30,6 +30,7 @@ class Navigation extends Component {
   hideMenu() {
     this.setState({ showMenu: false });
   };
+  
 
   render() {
     const { showMenu } = this.state
@@ -40,18 +41,18 @@ class Navigation extends Component {
             <NavMenuItem id="expeditions" onClick={ e => this.props.history.push("/expedition-type") } onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Expedition Type
                 {showMenu === "expeditions" &&
-                  <DropdownMenu>
+                  <DropdownContainer>
                     <DropdownLink to="/wildlife-tours">Wildlife Tours</DropdownLink>
                     <DropdownLink to="/wildlife-conservation">Widlife Conservation Tours</DropdownLink>
                     <DropdownLink to="/biodiversity-assessment">Biodiversity Assessments</DropdownLink>
-                  </DropdownMenu>
+                  </DropdownContainer>
                 }
             </NavMenuItem>
             <NavMenuItem id="wildlife" onClick={ e => this.props.history.push("/wildlife") } onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Wildlife
                 {showMenu === "wildlife" &&
-                  <DropdownMenu>
-                    <DropdownList>
+                  <DropdownContainer>
+                    <Dropdown>
                       <DropdownLink to="/big-cats">Big Cats</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/lions">Lions</DropdownLink>
@@ -60,8 +61,8 @@ class Navigation extends Component {
                         <DropdownLink to="/leopards">Leopards</DropdownLink>
                         <DropdownLink to="/snow-leopards">Snow Leopards</DropdownLink>
                       </SecondDropdown>
-                    </DropdownList>
-                    <DropdownList>
+                    </Dropdown>
+                    <Dropdown>
                       <DropdownLink to="/large-mammals">Large Mammals</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/oryx">Arabian Oryx</DropdownLink>
@@ -75,8 +76,8 @@ class Navigation extends Component {
                         <DropdownLink to="/gazelles">Mountain Gazelles</DropdownLink>
                         <DropdownLink to="/cape-buffalo">Cape Buffalo</DropdownLink>
                       </SecondDropdown>
-                    </DropdownList>
-                    <DropdownList>
+                    </Dropdown>
+                    <Dropdown>
                       <DropdownLink to="/small-mammals">Small Mammals</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/gordons-wildcat">Gordon's Wildcat</DropdownLink>
@@ -85,23 +86,23 @@ class Navigation extends Component {
                         <DropdownLink to="/wolverines">Wolverines</DropdownLink>
                         <DropdownLink to="/lynx">Lynx</DropdownLink>
                       </SecondDropdown>
-                    </DropdownList>
-                    <DropdownList>
+                    </Dropdown>
+                    <Dropdown>
                       <DropdownLink to="/primates">Primates</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/gorillas">Gorillas</DropdownLink>
                         <DropdownLink to="/orangutans">Orangutan</DropdownLink>
                         <DropdownLink to="/monkeys">Monkeys</DropdownLink>
                       </SecondDropdown>
-                    </DropdownList>
-                    <DropdownList>
+                    </Dropdown>
+                    <Dropdown>
                       <DropdownLink to="/reptiles">Reptiles</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/komodo">Komodo Dragons</DropdownLink>
                         <DropdownLink to="/anacondas">Anacondas</DropdownLink>
                       </SecondDropdown>
-                    </DropdownList>
-                    <DropdownList>
+                    </Dropdown>
+                    <Dropdown>
                       <DropdownLink to="/marine">Marine</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                         <DropdownLink to="/turtles">Sea Turtles</DropdownLink>
@@ -111,20 +112,20 @@ class Navigation extends Component {
                         <DropdownLink to="/penguins">Penguins</DropdownLink>
                         <DropdownLink to="/coral-reef">Coral Reef</DropdownLink>
                       </SecondDropdown>
-                    </DropdownList>
-                    <DropdownList>
+                    </Dropdown>
+                    <Dropdown>
                       <DropdownLink to="/birds">Birds</DropdownLink>
                       <SecondDropdown className="dropdown-content">
                       </SecondDropdown>
-                    </DropdownList>
-                  </DropdownMenu>
+                    </Dropdown>
+                  </DropdownContainer>
                 }
             </NavMenuItem>
             <NavMenuItem id="destinations" onClick={ e => this.props.history.push("/destinations") } onMouseOver={(event) => this.showMenu(event)} onMouseLeave={(event) => this.hideMenu(event)}>
                 Destinations
                 {showMenu === "destinations" &&
-                  <DropdownMenu className="dropdown">
-                  <DropdownList>
+                  <DropdownContainer className="dropdown">
+                  <Dropdown>
                     <DropdownLink to="africa">Africa</DropdownLink>
                     <SecondDropdown className="dropdown-content">
                       <DropdownLink to="/kenya">Kenya</DropdownLink>
@@ -136,8 +137,8 @@ class Navigation extends Component {
                       <DropdownLink to="/namibia">Namibia</DropdownLink>
                       <DropdownLink to="/rwanda">Rwanda</DropdownLink>
                     </SecondDropdown>
-                  </DropdownList>
-                  <DropdownList>
+                  </Dropdown>
+                  <Dropdown>
                     <DropdownLink to="asia">Asia</DropdownLink>
                     <SecondDropdown className="dropdown-content">
                     <DropdownLink to="/thailand">Thailand</DropdownLink>
@@ -153,7 +154,7 @@ class Navigation extends Component {
                     <DropdownLink to="/indonesia">Indonesia</DropdownLink>
                     <DropdownLink to="/tibet">Tibet</DropdownLink>
                   </SecondDropdown>
-                  </DropdownList>
+                  </Dropdown>
                   <DropdownLink to="/oceania">Oceania</DropdownLink>
                   <DropdownLink to="/central-america">Central America</DropdownLink>
                   <DropdownLink to="/south-america">South America</DropdownLink>
@@ -161,7 +162,7 @@ class Navigation extends Component {
                   <DropdownLink to="/middle-east">The Middle East</DropdownLink>
                   <DropdownLink to="/north-america">North America</DropdownLink>
                   <DropdownLink to="/antarctic">The Antarctic</DropdownLink>
-                </DropdownMenu>
+                </DropdownContainer>
                 }
             </NavMenuItem>
             <NavMenuItem onClick={ e => this.props.history.push("/news") }>

@@ -4,7 +4,8 @@ const sizes = {
       small: '170px',
       medium: '200px',
       large: '300px',
-      xlarge: '400px'
+      xlarge: '400px',
+      xxlarge: '600px',
     },
   }
   

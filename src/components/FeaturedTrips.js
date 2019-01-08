@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import caiman from '../assets/caiman.png';
-import AmurLeopard from '../assets/amurleopard.jpg';
+import IberianWolf from '../assets/iberianwolf.jpg';
+import BrownBear from '../assets/brownbear.jpg';
+import SnowLeopard from '../assets/snowleopard3.jpg';
+
+const FeaturedContainer = styled.div`
+    background-color: #fff;
+`
 
 const Wrapper = styled.div`
     @media screen and (min-width: 1024px){
@@ -42,26 +47,26 @@ const TripCompany = styled.h3`
 
 const FeaturedTrips = () => {
     return (
-        <div>
+        <FeaturedContainer>
             <MainTitle>Featured Trips</MainTitle>
-         <Wrapper>
-            <Trip>
-                <FeaturedImage src={AmurLeopard} alt="caiman"/>
-                <TripTitle>Snow Leopards of Kygyzstan</TripTitle>
-                <TripCompany>Nature Expeditions</TripCompany>
-            </Trip>
-            <Trip>
-                <FeaturedImage src={caiman} alt="caiman"/>
-                <TripTitle>Iberian Wolf Conservation</TripTitle>
-                <TripCompany>Bioinsight Expeditions</TripCompany>
-            </Trip>
-            <Trip>
-                <FeaturedImage src={caiman} alt="caiman"/>
-                <TripTitle>Kamchatka Brown Bears</TripTitle>
-                <TripCompany>Royle Safaris</TripCompany>
-            </Trip>
-        </Wrapper>
-        </div>
+            <Wrapper>
+                <Trip>
+                    <FeaturedImage src={SnowLeopard} alt="snowleopard"/>
+                    <TripTitle>Snow Leopards of Kyrgyzstan</TripTitle>
+                    <TripCompany>Nature Expeditions</TripCompany>
+                </Trip>
+                <Trip>
+                    <FeaturedImage src={IberianWolf} alt="caiman"/>
+                    <TripTitle>Iberian Wolf Conservation</TripTitle>
+                    <TripCompany>Bioinsight Expeditions</TripCompany>
+                </Trip>
+                <Trip>
+                    <FeaturedImage src={BrownBear} alt="caiman"/>
+                    <TripTitle>Kamchatka Brown Bears</TripTitle>
+                    <TripCompany>Royle Safaris</TripCompany>
+                </Trip>
+            </Wrapper>
+        </FeaturedContainer>
     )
 }
 export default FeaturedTrips
