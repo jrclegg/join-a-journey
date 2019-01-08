@@ -10,7 +10,7 @@ const FeaturedContainer = styled.div`
 const Wrapper = styled.div`
     @media screen and (min-width: 1024px){
         display: grid;
-        grid-template-columns: 400px 400px 400px;
+        grid-template-columns: 49% 49%;
         background-color: #fff;
         color: #444;
         justify-content: space-between;	
@@ -59,11 +59,6 @@ const FeaturedWildlife = () => {
                 <Animal>
                     <FeaturedImage src={tiger} alt="tiger"></FeaturedImage>
                     <WildlifeTitle>Siberian Tiger Winter Tour</WildlifeTitle>
-                    <TripCompany>Royle Safaris</TripCompany>
-                </Animal>
-                <Animal>
-                    <FeaturedImage src={tiger} alt="tiger"></FeaturedImage>
-                    <WildlifeTitle>Sunderbans Tiger Cruise</WildlifeTitle>
                     <TripCompany>Royle Safaris</TripCompany>
                 </Animal>
             </Wrapper>
